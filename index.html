@@ -22,7 +22,7 @@
 
 </head>
   <body>
-    
+    <form method="POST" action="">
 
     <div class="container ">
        
@@ -43,34 +43,34 @@
                     <div class="col-8">
                         <div class="input-group mb-3">
                             <span class="input-group-text" >Patient</span>
-                            <input type="text" class="form-control" placeholder="Enter Full Name"  >
+                            <input type="text" class="form-control" placeholder="Enter Full Name" name="patient_name" >
                         </div>
             
                         <div class="input-group mb-3">
                             <span class="input-group-text" >Address</span>
-                            <input type="text" class="form-control" placeholder="Address"  >
+                            <input type="text" class="form-control" placeholder="Address" name="patient_address" >
                         </div>
             
                         <div class="input-group mb-3">
                             <span class="input-group-text" >City</span>
-                            <input type="text" class="form-control" placeholder="City"  >
+                            <input type="text" class="form-control" placeholder="City" name="patient_city" >
                         </div>
                     </div>
                     <div class="col-4">
                       
                         <div class="input-group mb-3">
                             <span class="input-group-text" >Inv. No</span>
-                            <input type="text" class="form-control" placeholder="Inv. No"  >
+                            <input type="text" class="form-control" placeholder="Inv. No" name="patient_invoice" >
                         </div>
 
                         <div class="input-group mb-3">
                             <span class="input-group-text" >Inv. Date</span>
-                            <input type="date" class="form-control" placeholder="Inv. Date"  >
+                            <input type="date" class="form-control" placeholder="Inv. Date" name="invoice_date" >
                         </div>
 
                         <div class="input-group mb-3">
                           <span class="input-group-text" >Doctor</span>
-                          <input type="text" class="form-control" placeholder="Doctor Name"  >
+                          <input type="text" class="form-control" placeholder="Doctor Name" name="doctor_name" >
                       </div>
 
 
@@ -100,7 +100,7 @@
                         <td><input type="text" class="form-control" ></td>
                         <td><input type="number" class="form-control text-end" name="qty" onchange="Calc(this);"></td>
                         <td><input type="number" class="form-control text-end" name="rate"  onchange="Calc(this);"></td>
-                        <td><input type="number" class="form-control text-end" name="amt" value="0" disabled=""></td>
+                        <td><input type="number" class="form-control text-end" name="amt" value="0" readonly=""></td>
                         <td class="NoPrint"><button type="button" class="btn btn-sm btn-danger" onclick="BtnDel(this)">X</button></td>
                       </tr>
                     </tbody>
@@ -109,14 +109,15 @@
 
                   <div class="row">
                     <div class="col-8">
-                      
+
+                        <button type="submit" class="btn btn-primary" >Submit</button>
                         <button type="button" class="btn btn-primary" onclick="GetPrint()">Print</button>
 
                     </div>
                     <div class="col-4">
                         <div class="input-group mb-3">
                             <span class="input-group-text" >Total</span>
-                            <input type="number" class="form-control text-end" id="FTotal" name="FTotal" disabled="">
+                            <input type="number" class="form-control text-end" id="FTotal" name="FTotal" readonly="">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text" >PAID</span>
@@ -124,7 +125,7 @@
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text" >DUE Amt</span>
-                            <input type="number" class="form-control text-end" id="FNet" name="FNet" disabled="">
+                            <input type="number" class="form-control text-end" id="FNet" name="FNet" readonly="">
                         </div>
                         <P>N.U. BASHIR AHMAD | Pathologist</P>
 
@@ -136,6 +137,7 @@
           </div>
 
     </div>
+    </form>
 
 
 
