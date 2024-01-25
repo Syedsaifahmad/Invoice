@@ -22,8 +22,10 @@
 
 </head>
   <body>
+    <form method="POST" action="">
+
     <div class="container ">
-       <form method="POST" action="https://script.google.com/macros/s/AKfycbwWjVtdcVRuW0-vCtHXLOWn_uhowp8_tP6CL_SAohwF6rH2E1JQZLtJextyCX6AxBpQNA/exec">
+       
 
         <div class="card">
             <div class="card-header text-center">
@@ -34,6 +36,7 @@
               <h4><b>INVOICE</b></h4>
               <h6>Contact No : +91-9279704858 || E-mail : bashir_vig@yahoo.co.in</h6>
             </div>
+            
             <div class="card-body">
 
                 <div class="row">
@@ -78,6 +81,7 @@
 
                 </div>
 
+
                 <table class="table table-bordered">
                     <thead class="table-success">
                       <tr>
@@ -96,9 +100,9 @@
                     <tbody id="TBody">
                       <tr id="TRow" class="d-none">
                         <th scope="row">1</th>
-                        <td><input type="text" class="form-control" name="item-nm" ></td>
-                        <td><input type="number" class="form-control text-end" name="qty" onchange="Calc(this);"></td>
-                        <td><input type="number" class="form-control text-end" name="rate"  onchange="Calc(this);"></td>
+                        <td><input type="text" class="form-control" name="item_nm"></td>
+                        <td><input type="number" class="form-control text-end" name="price" onchange="Calc(this);"></td>
+                        <td><input type="number" class="form-control text-end" name="disc"  onchange="Calc(this);"></td>
                         <td><input type="number" class="form-control text-end" name="amt" value="0" readonly=""></td>
                         <td class="NoPrint"><button type="button" class="btn btn-sm btn-danger" onclick="BtnDel(this)">X</button></td>
                       </tr>
@@ -134,12 +138,10 @@
                 </div>
              </div>
           </div>
-      </form>
 
     </div>
-    
 
-
+  </form>
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
