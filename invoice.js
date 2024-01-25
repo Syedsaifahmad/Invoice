@@ -33,10 +33,10 @@ function Calc(v)
     /*Detail Calculation Each Row*/
     var index = $(v).parent().parent().index();
     
-    var qty = document.getElementsByName("qty")[index].value;
-    var rate = document.getElementsByName("rate")[index].value;
+    var price = document.getElementsByName("price")[index].value;
+    var disc = document.getElementsByName("disc")[index].value;
 
-    var amt = qty - rate;
+    var amt = price - disc;
     document.getElementsByName("amt")[index].value = amt;
 
     GetTotal();
@@ -57,8 +57,8 @@ function GetTotal()
 
     document.getElementById("FTotal").value = sum;
 
-    var gst =  document.getElementById("FGST").value;
-    var net = +(sum) + -(gst);
+    var paid =  document.getElementById("PAID").value;
+    var net = +(sum) + -(paid);
     document.getElementById("FNet").value = net;
 
 }
